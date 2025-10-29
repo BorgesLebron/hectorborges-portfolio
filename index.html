@@ -3,26 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hector Borges - My Portfolio</title>
+    <title>Cybersecurity Professional Profile</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        /* Custom styling for a clean, modern look */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Light background */
+            scroll-padding-top: 5rem; /* Offset for fixed header */
         }
-        h1 {
-            color: #0056b3;
+        .nav-link:hover {
+            color: #4f46e5; /* Indigo-600 on hover */
         }
-        p {
-            font-size: 1.2em;
+        .section-header {
+            border-left: 5px solid #4f46e5;
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Hector Borges's Portfolio!</h1>
-    <p>This is my first deployed website with Cloudflare Pages.</p>
-    <p>Stay tuned for amazing projects, education, and work history.</p>
+    <!-- 
+        HEADER & NAVIGATION (Fixed Top Ribbon) 
+    -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <!-- Logo/Name -->
+            <a href="#home" class="text-2xl font-bold text-gray-800">
+                <span class="text-indigo-600">Cyber</span>Sense
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">Home</a>
+                <a href="#about" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">About</a>
+                <a href="#resume" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">Resume</a>
+                <a href="#cybersense" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">Newsletter</a>
+                <a href="#research" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">Research</a>
+                <a href="#contact" class="text-gray-600 nav-link font-medium transition duration-150 ease-in-out">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button (Placeholder for functionality) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Home</a>
+                <a href="#about" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About</a>
+                <a href="#resume" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Resume</a>
+                <a href="#cybersense" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Newsletter</a>
+                <a href="#research" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Research</a>
+                <a href="#contact" onclick="closeMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- 
+            HOME SECTION (Hero and Bio) 
+        -->
+        <section id="home" class="min-h-screen flex items-center justify-center p-8 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Left: Photo Placeholder -->
+                    <div class="flex justify-center md:justify-end">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full shadow-2xl overflow-hidden flex items-center justify-center">
+                            <!-- Replace with your actual photo URL -->
+                            <img src="Profile.jpg" 
+                                 alt="Professional Portrait" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right: Short Bio -->
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
+                            Hector J. Borges
+                        </h1>
+                        <p class="text-indigo-600 text-xl sm:text-2xl font-semibold mb-6">
+                            CyberSense — The New Common Sense for a Digital World
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed max-w-lg">
+                            In every profession, “common sense” evolves from experience. For soldiers, it’s checking your perimeter. For nurses, it’s washing your hands. But in the digital world, what feels obvious isn’t always safe. We click, we trust, we move fast — and that instinct is exactly what cyber actors exploit.
+                            CyberSense is about rewiring that instinct. It’s the cultivated ability to pause, verify, and act with digital discipline. This newsletter is your guide to building that intuition across our workforce — one byte of sense at a time
+                        </p>
+                        <div class="mt-8">
+                            <a href="#contact" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium shadow-lg hover:bg-indigo-700 transition duration-300">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+            FLOATING ACTION BUTTON (FAB) 
+            Fixed button linking directly to the Resume section.
+        -->
+        <a href="#resume" class="fixed bottom-6 right-6 z-50 p-4 bg-indigo-600 text-white rounded-full shadow-xl hover:bg-indigo-700 transition duration-300 transform hover:scale-105" title="View Resume">
+            <!-- Icon for Resume/Document -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+        </a>
+
+        <!-- 
+            ABOUT SECTION 
+        -->
+        <section id="about" class="py-24 px-8 bg-white border-t border-gray-200">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 section-header pl-4">About Me</h2>
+                <div class="space-y-6 text-gray-700 leading-relaxed">
+                    <p>
+                        My journey into cybersecurity is a natural evolution of my commitment to protection and strategic operations, skills refined during my service in the U.S. Army. That experience instilled in me an unwavering focus on mission accomplishment, meticulous planning, and robust risk mitigation—qualities essential in the complex threat landscape of modern digital environments.
+                    </p>
+                    <p>
+                        As a graduate student, I am currently diving deep into Zero Trust Architecture (ZTA), Security Information and Event Management (SIEM), and governance frameworks like the NIST CSF 2.0. I believe that effective cyber defense requires both technical expertise and a profound understanding of organizational risk, which is why my studies integrate both offensive and defensive disciplines.
+                    </p>
+                    <p>
+                        I am passionate about creating resilient, scalable security solutions and am actively seeking opportunities to apply my analytical abilities and dedication to protect critical information systems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            RESUME SECTION (Links from FAB)
+        -->
+        <section id="resume" class="py-24 px-8 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 section-header pl-4">Resume</h2>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-indigo-100">
+                    <p class="text-gray-700 mb-4">
+                        This section provides the direct link to download my most recent professional resume.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <!-- Resume link updated to use repository asset -->
+                        <a href="./assets/resume.pdf" target="_blank" class="w-full sm:w-auto bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">
+                            Download Full Resume (PDF)
+                        </a>
+                        <p class="text-sm text-gray-500">
+                            <code class="bg-gray-200 p-1 rounded">/Hector Borges.pdf</code>)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            CYBERSENSE SECTION (Personal Blog/Thoughts)
+        -->
+        <section id="cybersense" class="py-24 px-8 bg-white border-t border-gray-200">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 section-header pl-4">CyberSense (NewsLetter)</h2>
+                <div class="space-y-6">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-inner">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Cyber Brief: The Human Element in Zero Trust</h3>
+                        <p class="text-gray-700">
+                           A recent industry study found that over 70% of successful cyberattacks began with human error — not technical flaws. Organizations often invest millions in Zero Trust architecture but forget the “zero trust” mindset starts with people.
+                           Zero Trust means never assume safety, even in familiar digital spaces. Just as a pilot runs checklists before every flight, we must treat every email, link, and login as a new preflight inspection.
+                           CyberSense takeaway: Treat verification as second nature, not suspicion. Trust is earned — even by your inbox.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-inner">
+                        <h3 class="text-xl font-semibold text-indigo-800 mb-2">Training Byte: The 3-Second Cyber Pause</h3>
+                        <p class="text-gray-700">
+                            Before opening any link, attachment, or message, pause for three seconds and ask:
+                                1.	Do I recognize the sender?
+                                2.	Is the request typical for them?
+                                3.	Could this have been sent another way?
+                            Three seconds can prevent three days of downtime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            RESEARCH SECTION 
+        -->
+        <section id="research" class="py-24 px-8 bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 section-header pl-4">Research & Academic Work</h2>
+                <div class="space-y-6 text-gray-700">
+                    <p>
+                        This area highlights my academic contributions and thesis work within the graduate program.
+                    </p>
+                    <ul class="list-disc list-inside space-y-3 pl-5">
+                        <li>**Thesis Topic:** The Efficacy of Behavioral Biometrics in Multi-Factor Authentication Systems.</li>
+                        <li>**Coursework Focus:** Advanced Cryptography, Network Security Operations, and Cyber Law & Ethics.</li>
+                        <li>**Poster Presentation:** Presented research on regulatory compliance overlap between HIPAA and NIST SP 800-53 r5.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            CONTACT SECTION 
+        -->
+        <section id="contact" class="py-24 px-8 bg-white border-t border-gray-200">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 section-header pl-4">Contact</h2>
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-700 mb-6">
+                        I'm always open to discussing collaboration, research opportunities, or career advice.
+                    </p>
+                    
+                    <!-- Simple Contact Links -->
+                    <div class="space-y-4">
+                        <p><strong class="text-indigo-600">Email:</strong> <a href="mailto:your.email@example.com" class="text-gray-800 hover:text-indigo-600">hjborges@gmail.com</a></p>
+                        <p><strong class="text-indigo-600">LinkedIn:</strong> <a href="your_linkedin_link" target="_blank" class="text-gray-800 hover:text-indigo-600">linkedin.com/in/hectorjborges</a></p>
+                        <p><strong class="text-indigo-600">GitHub:</strong> <a href="your_github_link" target="_blank" class="text-gray-800 hover:text-indigo-600">/yourusername</a></p>
+                    </div>
+                    
+                    <!-- Simple Contact Form Placeholder -->
+                    <form class="mt-8 space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500">
+                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-6 text-center">
+        <p>&copy; The opinions expressed here are my own and not necessarily those of my current or past employers. Copyright (C) 2025 Hector Borges. All Rights Reserved. Legal Notices.</p>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        menuButton.addEventListener('click', toggleMobileMenu);
+
+        // Simple script to handle smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
