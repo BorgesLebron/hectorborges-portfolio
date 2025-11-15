@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About | Hector Borges</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hector Borges | About Me </title> 
+    <meta name="description" content="Hector Borges's background and experience.">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <nav>...same nav...</nav>
-  <main>
-    <h1>About Hector Borges</h1>
-    <p>Detailed background, awards, and accomplishments coming soon.</p>
-  </main>
-  <footer>...same footer...</footer>
+    <header class="page-header">
+        <h1>About Me</h1>
+        <p>From Global Operations Leader to Dedicated Cybersecurity Professional</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>        
+        <a href="about.html">About</a> <a href="resume.html">Resume</a>
+        <a href="documents.html">Documents</a>
+        <a href="research.html">Research</a>
+        <a href="media.html">Media</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="main-content">
+	<p>I was born in Caguas, Puerto Rico, and demonstrated a commitment to service early on. After graduating high school on May 25, 2000, I was on my way to the Army Language Center just four days later. Following initial training at Fort Sill, OK, I transferred to active duty in 2003, where my career began in Baumholder, Germany. I immediately gained critical experience, deploying in support of Operation Iraqi Freedom (OIF).</p>
+
+        <h3>Leadership, Program Management, and Innovation</h3>
+        <p>My career progressed rapidly, focusing on roles that required extreme precision, resource management, and decisive leadership. At Fort Riley, KS, I was selected to serve an extended tour as a Platoon Sergeant in a newly formed unit, a role I sustained based on performance. There, I implemented programs that directly enhanced unit readiness, notably establishing the post-wide Army Combatives Program and tournament. I also became an expert in Counter-IED simulator training, successfully utilizing this knowledge to prepare an entire Battalion for deployment to OIF.</p>
+	<p>My time at Fort Bragg, NC, was defined by mastering elite skills and orchestrating high-stakes logistics. I completed demanding courses including Airborne, Air Assault, Jumpmaster, and the Master Resiliency Trainer Course (UPenn). I planned and executed complex operational missions, including the first dual-caliber airborne operation, which successfully dropped M777 and M119 howitzers alongside 240 personnel from C-17 aircraft. Furthermore, I led a practical process improvement initiative by collaborating with my section chiefs to design, fabricate, and distribute a protective cover for a critical component of the M777 cannon used by units across the installation—a direct example of field-level innovation and risk mitigation</p>
+        <h3>NATO Interoperability and Process Standardization</h3>
+        <p>The final stretch of my military career in Germany solidified my expertise in international and joint operations. I immediately took action in a severely undermanned unit, rapidly certifying the team within 45 days of arrival. This success enabled a deployment to Poland for Operation Anaconda 2016, where we executed over 700 rounds of accurate artillery fire. I later served as the Acting First Sergeant during Operation Summer Tempest 2016 in Sardinia, enhancing fire interoperability with NATO allies. My culminating contribution was playing a key role in integrating multiple organizational Airborne Operating Procedures into the Common Army Airborne Standard Operating Procedure (CAASOP), ensuring standardized, secure, and precise execution of complex airborne missions across the force.</p>
+	<p>Outside of my duties, I was an active member of my community, volunteering my time to train at a local wrestling gym and organizing charity events—often with my wrestling team and local motorcycle clubs—to feed and provide clothing for the homeless in Fayetteville, and offering entertainment at a local senior center.</p>
+
+	<h3>Transition to Cybersecurity</p>
+	<p>This 14-year military career forged an expertise in operational planning, risk assessment, strict regulatory compliance, and high-impact project execution. These core competencies are the direct foundation for my current path. Today, I am channeling that mission-focused discipline into the world of digital defense, backed by a 4.0 GPA Bachelor of Science in Cybersecurity and ongoing Master's study, ensuring I apply the same principles of meticulous readiness and operational integrity to securing digital assets.</p>
+
+
+        </main>
+
+    <footer>    
+        <p>&copy; <span id="current-year-footer"></span> Hector Borges. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamically update the copyright year for the footer
+        document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+
+        // Optional: Highlight the active navigation link based on the current page
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else if (currentPath === '' && link.getAttribute('href') === 'index.html') {
+                    // Handle case where index.html is loaded as root (e.g., yoursite.com/)
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
