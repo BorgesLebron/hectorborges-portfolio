@@ -543,3 +543,61 @@ footer {
         font-size: 0.95rem;
     }
 }
+
+/* Add to assets/style.css */
+
+/* Contact Form Specific Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto; /* Center the form and add vertical space */
+    padding: 2rem;
+    background-color: var(--card-background); /* Use a defined card background or similar */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-background); /* Define a background for inputs */
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: auto; /* Allow button to size naturally */
+    display: inline-block; /* For proper styling */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+}
