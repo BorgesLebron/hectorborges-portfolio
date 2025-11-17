@@ -308,8 +308,18 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.main-content h1 {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    /* border-bottom: 2px solid var(--border-color);*/
+    /*padding-bottom: 0.5rem;*/
+}
+
 .main-content h2 {
     font-size: 2rem;
+    text-align: center;
     color: var(--accent);
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
@@ -342,6 +352,23 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+#coming-soon-title {
+    /* Center the text within the <h1> element */
+    text-align: center; 
+    
+    /* Remove the full-width border-bottom which looks odd when text is centered */
+    border-bottom: none; 
+    
+    /* Make it a little bigger/more dramatic */
+    font-size: 5rem;
+    
+    /* Center the <h1> block horizontally by setting margins, if needed, though text-align is usually enough */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Make the color stand out */
+    color: var(--accent-light); 
+}
 
 /* Responsive Adjustments for Sub-Pages */
 @media (max-width: 768px) {
@@ -601,3 +628,12 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
 }
+
+/* Define --card-background and --input-background in your :root if not already */
+/* :root {
+    --card-background: #1e1e1e;
+    --input-background: #2a2a2a;
+    --text-color: #e0e0e0;
+    --light-text-color: #a0a0a0;
+    --border-color: #444;
+} */
