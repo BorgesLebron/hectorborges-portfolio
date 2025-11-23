@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hector Borges | CyberSense </title> 
+    <meta name="description" content="[A concise description of this specific page's content, e.g., 'Learn more about Hector Borges's cybersecurity background and experience.']">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    </head>
+<body>
+    <header class="banner">
+        <img src="assets/CyberSense.png" alt="CyberSense Logo." class="banner-img">
+    </header>
+
+
+    <nav>
+        <a href="index.html">Home</a>        
+        <a href="about.html">About</a> <a href="resume.html">Resume</a>
+        <a href="documents.html">Documents</a>
+        <a href="research.html">Research</a>
+        <a href="cybersense.html">CyberSense</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="main-content">
+	<h1 id="coming-soon-title">Coming Soon</h1>
+	<p>In every profession, common sense often emerges through repeated exposure to real conditions. Service members develop situational awareness by continuously assessing the environment, evaluating potential threats, and coordinating with friendly forces to safeguard the area of operation. Someone with a medical background performs rapid checks of Airway, Breathing, and Circulation, a sequence that tends to anchor lifesaving interventions. In contrast, the digital world may appear intuitive, yet familiarity does not always translate into safety. We click, we trust, we accelerate our pace, and this suggests that instinct alone can create precisely the openings malicious actors seek to exploit.</p>
+	<p>CyberSense aims to retrain that instinct. It represents a deliberate shift toward pausing, verifying, and responding with digital discipline. This newsletter centers on strengthening that intuition across our workforce, cultivating a mindset that develops one byte of sense at a time.</p>
+
+    </main>
+
+    <footer>    
+        <p>&copy; <span id="current-year-footer"></span> Hector Borges. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamically update the copyright year for the footer
+        document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+
+        // Optional: Highlight the active navigation link based on the current page
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else if (currentPath === '' && link.getAttribute('href') === 'index.html') {
+                    // Handle case where index.html is loaded as root (e.g., yoursite.com/)
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
