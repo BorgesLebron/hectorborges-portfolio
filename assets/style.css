@@ -45,7 +45,7 @@ p {
 .banner {
     width: 100%;
     overflow: hidden;
-    max-height: 300px; /* Consistent height */
+    max-height: 500px; /* Consistent height */
     position: relative; /* Allows content positioning if needed */
 }
 
@@ -636,4 +636,5 @@ footer {
     --text-color: #e0e0e0;
     --light-text-color: #a0a0a0;
     --border-color: #444;
+
 } */
