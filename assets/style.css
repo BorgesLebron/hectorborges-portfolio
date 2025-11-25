@@ -207,6 +207,51 @@ nav a.active { /* Style for active link */
     color: var(--light-text-color);
 }
 
+/* CyberSense/Section */
+.cybersense-section {
+    text-align: left;
+    padding: 2rem 0;
+}
+
+.cybersense-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--accent);
+}
+
+.letter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+    gap: 10rem;
+    margin-top: 2rem;
+}
+
+.letter-item {
+    background-color: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
+
+.letter-item h3 {
+    color: var(--accent-light);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.letter-item p {
+    font-size: 0.95rem;
+    color: var(--light-text-color);
+}
+
 
 /* Footer */
 footer {
@@ -301,7 +346,7 @@ footer {
 /* Main Content Area for Sub-Pages */
 .main-content {
     max-width: 1000px; /* Consistent max-width for content */
-    margin: 3rem auto; /* Vertical spacing */
+    margin: 2rem auto; /* Vertical spacing */
     padding: 1rem 2rem; /* Horizontal padding, more on smaller screens */
     background-color: #1a1a1a; /* Slightly lighter background for the content block */
     border-radius: 8px;
@@ -328,7 +373,7 @@ footer {
 }
 
 .main-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--accent);
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -571,6 +616,95 @@ footer {
     }
 }
 
+/* --- Embedded Image Styles for About/Other Pages --- */
+.embedded-image-container {
+    /* Center the image block horizontally within the main content */
+    margin: 2rem auto; 
+    /* Max width helps keep the image from stretching too wide on large screens */
+    max-width: 600px; 
+    
+    /* Add subtle card styling for presentation */
+    padding: 1rem;
+    background-color: var(--card-background); 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centers the image and caption */
+}
+
+.embedded-image {
+    /* Ensure the image scales down and up, but never larger than its container */
+    max-width: 100%;
+    max-height: 400px; /* Prevents overly large images */
+    height: auto;
+    display: block; /* Important for removing extra space below */
+    margin: 0 auto; /* Ensures image is centered inside its container */
+    
+    /* Style consistency */
+    border-radius: 4px; 
+    border: 2px solid var(--accent); 
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 0.5rem; /* Small horizontal padding */
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    .embedded-image-container {
+        padding: 0.5rem;
+        margin: 1.5rem auto;
+    }
+}
+
+.image-gallery {
+    display: flex; /* Enable Flexbox layout */
+    flex-wrap: wrap; /* Allows images to wrap onto new lines if necessary */
+    justify-content: space-between; /* Distribute space evenly between images */
+    gap: 1rem; /* Space between the image containers */
+    margin: 2rem 0; /* Vertical margin for the whole gallery block */
+}
+
+/* Override the default single-image container style when it's inside a gallery */
+.image-gallery .embedded-image-container {
+    /* Flex-grow: 1 allows them to fill the space. 
+       Flex-basis: Sets a minimum width, guaranteeing 3 or 4 fit per row */
+    flex: 1 1 calc(25% - 1rem); /* 1rem accounts for the gap */
+    
+    /* Remove single-image centering and max-width */
+    max-width: none;
+    margin: 0;
+    
+    /* Optional: Slight border adjustment for grouped look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 0.8rem;
+}
+
+/* Ensure images within the gallery fill their new smaller containers */
+.image-gallery .embedded-image {
+    max-height: 150px; /* Limit the vertical size of the small images */
+}
+
+
+/* Responsive Adjustments: Stack images on very small screens */
+@media (max-width: 700px) {
+    .image-gallery .embedded-image-container {
+        /* On small screens, let them take up half the width (two per row) */
+        flex: 1 1 calc(50% - 1rem); 
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery .embedded-image-container {
+        /* On smallest screens, stack them (one per row) */
+        flex: 1 1 100%; 
+    }
+}
+
 /* Add to assets/style.css */
 
 /* Contact Form Specific Styles */
@@ -636,5 +770,4 @@ footer {
     --text-color: #e0e0e0;
     --light-text-color: #a0a0a0;
     --border-color: #444;
-
 } */
