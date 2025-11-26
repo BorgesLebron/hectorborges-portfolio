@@ -379,7 +379,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-.main-content p,
+.main-content p:not([class*="text-"]), /* Exclude paragraphs that have a Tailwind text color class */
 .main-content ul,
 .main-content ol {
     font-size: 1.05rem;
