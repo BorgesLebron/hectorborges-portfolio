@@ -5,43 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberSense: Daily Digital Awareness Brief | December 1, 2025</title>
     
-    <!-- START: Open Graph (OG) Meta Tags for Social Sharing (LinkedIn) -->
-    <!-- This ensures LinkedIn shows the correct title, image, and description -->
     <meta property="og:title" content="Surface-to-Signal | December 1, 2025"/>
-    <meta property="og:description" content="Digital threats surface constantly across devices, networks, and software, often hidden behind routine actions and trusted platforms. Cyber adversaries exploit gaps where familiarity meets convenience — from mobile devices to development libraries and cloud services. This edition delivers a clear, focused snapshot of current threat activity, modernization developments, and practical defensive habits intended to sharpen situational awareness and support resilient behavior across the digital workforce."/>
-    <meta property="og:image" content="https://raw.githubusercontent.com/BorgesLebron/hectorborges-portfolio/main/assets/CyberSense.png"/>
-    
+    <meta property="og:description" content="Digital threats surface constantly across devices, networks, and software, often hidden behind routine actions and trusted platforms. Cyber adversaries exploit gaps where familiarity meets convenience, from mobile devices to development libraries and cloud services. This edition delivers a clear, focused snapshot of current threat activity, modernization developments, and practical defensive habits intended to sharpen situational awareness and support resilient behavior across the digital workforce."/>
+    <meta property="og:image" content="https://raw.githubusercontent.com/BorgesLebron/hectorborges-portfolio/main/assets/logo.png"/>
     <meta property="og:url" content="https://github.com/BorgesLebron/hectorborges-portfolio/tree/main/newsletter/12012025.html"/>
-
     <meta property="og:type" content="article" />
-    <!-- END: Open Graph (OG) Meta Tags -->
-
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for a cleaner newsletter look */
+        /* Custom styles for a dark, sci-fi/digital grid background with glowing blue accents. */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
+        /* New Dark Theme Body Style with Sci-Fi Grid Effect */
         body {
+            /* Base Dark Background Color and Sci-Fi Grid Effect */
+            background-color: #111827; 
+            background-image:
+                /* 1. Subtle horizontal glowing lines (top left to bottom right) */
+                linear-gradient(135deg, rgba(29, 78, 216, 0.0) 25%, rgba(29, 78, 216, 0.05) 50%, rgba(29, 78, 216, 0.0) 75%),
+                /* 2. Subtle vertical glowing lines (top right to bottom left) */
+                linear-gradient(-135deg, rgba(29, 78, 216, 0.0) 25%, rgba(29, 78, 216, 0.05) 50%, rgba(29, 78, 216, 0.0) 75%),
+                /* 3. Larger, softer blue glow in the middle-left */
+                radial-gradient(circle at 10% 50%, rgba(30, 60, 100, 0.25) 0%, rgba(30, 60, 100, 0.0) 50%),
+                /* 4. Smaller, brighter blue glow in the middle-right */
+                radial-gradient(circle at 90% 40%, rgba(0, 150, 255, 0.15) 0%, rgba(0, 150, 255, 0.0) 30%),
+                /* 5. A faint, subtle grid pattern (lighter gray lines) */
+                linear-gradient(0deg, transparent 24%, rgba(60, 60, 60, 0.1) 25%, rgba(60, 60, 60, 0.1) 26%, transparent 27%),
+                /* 6. A faint, subtle grid pattern (lighter gray lines) */
+                linear-gradient(90deg, transparent 24%, rgba(60, 60, 60, 0.1) 25%, rgba(60, 60, 60, 0.1) 26%, transparent 27%);
+            
+            /* Adjust background sizes for grid and gradients */
+            background-size:
+                400px 400px, 
+                400px 400px, 
+                100% 100%, 
+                100% 100%, 
+                50px 50px, 
+                50px 50px; 
+        
+            background-attachment: fixed;
+            color: #e0e7ff; /* Light, slightly blue-tinted text color for overall page content */
             font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb; /* Light background for the page */
         }
-        /* Style for the main content cards */
+
+        /* Main Newsletter Container */
+        .newsletter-container {
+            /* Applying transparency and blur for the sci-fi look */
+            background-color: rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px); 
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Style for the main content cards - using a dark-theme semi-transparent background */
         .section-card {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            background-color: rgba(0, 0, 0, 0.3) !important; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
-            height: 100%; /* Important for grid/flex consistency */
+            height: 100%; 
+            border-color: rgba(255, 255, 255, 0.1) !important;
         }
         .section-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
         }
-        /* Style for the 'Opening Notes' banner box color */
-        .opening-notes-banner {
-            background-color: #eef2ff; /* Custom light indigo/lavender */
-            border-left-color: #4f46e5; /* Deeper indigo for the vertical bar */
+
+        /* Text Color Overrides for High Contrast (applying !important due to Tailwind) */
+        .text-gray-900, .text-gray-800, .text-gray-700 {
+            color: #e0e7ff !important; 
         }
-        /* LinkedIn Subscribe Button Style (Provided by User) */
+        .text-blue-800 {
+            color: #38bdf8 !important; /* Bright blue for section headers */
+        }
+        /* Link/Source Color */
+        .text-blue-700 {
+            color: #93c5fd !important; /* Light blue for links */
+        }
+        a.text-blue-700:hover {
+            color: #bfdbfe !important; /* Lighter on hover */
+        }
+        .border-indigo-600 {
+            border-color: #38bdf8 !important; /* Bright blue border for contrast */
+        }
+        /* LinkedIn Subscribe Button Style */
         .libutton {
             display: flex;
             flex-direction: column;
@@ -56,11 +101,18 @@
             border-radius: 16px;
             background-color: #0A66C2; /* LinkedIn Blue */
             font-family: "SF Pro Text", Helvetica, sans-serif;
-            font-weight: 500; /* Added font weight for readability */
-            transition: background-color 0.15s ease-in-out; /* Added transition */
+            font-weight: 500; 
+            transition: background-color 0.15s ease-in-out; 
         }
         .libutton:hover {
-            background-color: #b30000; 
+            background-color: #00FFFF; /* Bright cyan hover */
+        }
+        /* HR/Divider color */
+        hr {
+            /* Removing inline style, relying on this for consistent dividers */
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-bottom: none !important;
+            margin-bottom: 20px;
         }
     </style>
 
@@ -69,46 +121,32 @@
 
 <body class="p-4 sm:p-8">
 
-    <!-- Newsletter Container -->
-    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl p-6 sm:p-10 border border-gray-100">
+    <div class="newsletter-container max-w-4xl mx-auto rounded-xl shadow-2xl p-6 sm:p-10 border">
 
-        <!-- MAIN TITLE BANNER -->
         <section class="mb-10 pb-6 border-b-4 border-indigo-600">
             <img 
                 src="https://raw.githubusercontent.com/BorgesLebron/hectorborges-portfolio/main/assets/CyberSense.png" 
                 alt="CyberSense Newsletter Banner Title" 
-                class="w-full rounded-xl shadow-lg border border-gray-200"
+                class="w-full rounded-xl shadow-lg border border-gray-700"
                 onerror="this.onerror=null; this.src='https://placehold.co/800x200/4f46e5/ffffff?text=CyberSense+Banner+Placeholder'"
             >
         </section>
-        <!-- End of MAIN TITLE BANNER -->
-
-
-        <!-- Header / Main Title (Full Width) -->
         <header class="text-center mb-10 pb-10 border-b-4 border-indigo-600">
             <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
                 Daily Digital Awareness Brief
             </h1>
         </header>
 
-        <!-- NEW: Date/Issue Number Block -->
         <div class="mb-2 text-right">
             <span class="inline-block text-blue-700 text-base font-semibold px-6 py-0">
                 December 1, 2025
             </span>
         </div>
-        <!-- End of Date Block -->
-
-
-        <!-- Edition Title: -->
         <div class="mb-12">
             <h1 class="text-4xl sm:text-4xl font-extrabold text-gray-900 leading-tight tracking-tight text-center">
                 Under the Surface
             </h1>
         </div>
-        <!-- End of Edition Title Block -->
-
-        <!-- Opening Notes (Full Width) -->
         <section class="mb-12">
             <h2 class="text-2xl font-bold text-blue-800 mb-2 flex items-center">
                 Opening Notes
@@ -122,7 +160,7 @@
 
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-    <div class="section-card bg-white p-6 rounded-xl border border-gray-500">
+    <div class="section-card p-6 rounded-xl border">
         <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center border-b pb-2">
             Situational Awareness Scan
         </h2>
@@ -132,9 +170,7 @@
                     The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued urgent guidance prompting smartphone users to harden their devices. The warning comes amid ongoing exploitation of commercial spyware targeting mobile messaging apps. Users are advised to enable built-in protections, review app permissions, disable risky fallback features, and ensure secure configuration to reduce their exposure.
                 </p>
 
-                <hr style="border-top: 1px solid #E0E0E0; border-bottom: none; margin-bottom: 20px;">
-
-                <h3 class="text-xl font-semibold text-gray-800 mb-1">Are You Part of a Botnet?</h3>
+                <hr> <h3 class="text-xl font-semibold text-gray-800 mb-1">Are You Part of a Botnet?</h3>
                 <h3 class="text-l font-semibold text-gray-800 mb-1">GreyNoise Offers Free Scanner to Find Out</h3>
                 <a href="https://www.bleepingcomputer.com/news/security/greynoise-launches-free-scanner-to-check-if-youre-part-of-a-botnet/" class="text-blue-700 mb-3 text-sm font-medium tracking-wider block"><strong>Source: </strong>Bleeping Computer</a>
                 <p class="text-gray-800 mb-4 text-sm">
@@ -156,11 +192,11 @@
                     While often a subtle form of misuse, it contributes to the global cyber threat landscape and can sometimes lead to your IP address being flagged or blocked by legitimate services.
                 </p>
                 <a href="https://check.labs.greynoise.io/" class="text-blue-700 mb-3 text-sm font-medium tracking-wider block">Access the Free GreyNoise IP Scanner Here</a>
-                 
+                    
         </div>
 
     <div class="flex flex-col gap-8">
-        <div class="section-card bg-white p-6 rounded-xl border border-gray-500">
+        <div class="section-card p-6 rounded-xl border">
             <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center border-b pb-2">
                 Training Byte
             </h2>
@@ -173,7 +209,7 @@
                 </p>
             </div>
 
-        <div class="section-card bg-white p-6 rounded-xl border border-gray-500">
+        <div class="section-card p-6 rounded-xl border">
             <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center border-b pb-2">
                 Career Development Signal
             </h2>
@@ -190,7 +226,7 @@
     </div>
 </div>
 <div class="mb-12">
-    <div class="section-card bg-white p-6 rounded-xl border border-gray-500">
+    <div class="section-card p-6 rounded-xl border">
         <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center border-b pb-2">
             Modernization and AI Insight
         </h2>
@@ -198,9 +234,9 @@
                 <h3 class="text-l font-semibold text-gray-800 mb-1">Scientists Claim Breakthrough: AI Calculations “At the Speed of Light”</h3>
                 <a href="https://www.livescience.com/technology/computing/scientists-say-theyve-eliminated-a-major-ai-bottleneck-now-they-can-process-calculations-at-the-speed-of-light" class="text-blue-700 mb-3 text-sm font-medium tracking-wider block"><strong>Source: </strong>Live Science</a>
                 <p class="text-gray-800 mb-4 text-sm">
-                    Researchers have announced a significant advancement in AI computation, potentially eliminating a major bottleneck by enabling certain AI calculations to be processed at nearly the speed of light. This breakthrough could dramatically accelerate real-time model deployment and enhance AI capabilities, signaling both immense opportunities for innovation and new challenges for cybersecurity professionals who must prepare for adversaries leveraging such rapid, automated exploitation at scale.                </p>
+                    Researchers have announced a significant advancement in AI computation, potentially eliminating a major bottleneck by enabling certain AI calculations to be processed at nearly the speed of light. This breakthrough could dramatically accelerate real-time model deployment and enhance AI capabilities, signaling both immense opportunities for innovation and new challenges for cybersecurity professionals who must prepare for adversaries leveraging such rapid, automated exploitation at scale.             </p>
 
-                <h3 class="text-l font-semibold text-gray-800 mb-1">AI Valuations, Market Hype, and the Trillion-Dollar Question</h3>
+                <hr> <h3 class="text-l font-semibold text-gray-800 mb-1">AI Valuations, Market Hype, and the Trillion-Dollar Question</h3>
                 <a href="https://www.nytimes.com/2025/11/28/world/ai-valuations-markets-technology-hongkong-fire.html" class="text-blue-700 mb-3 text-sm font-medium tracking-wider block"><strong>Source: </strong>The New York Times</a>
                 <p class="text-gray-800 mb-4 text-sm">
                     The soaring financial valuations of AI-driven enterprises are sparking critical discussions about the long-term sustainability and responsible deployment of artificial intelligence. As organizations rapidly scale AI initiatives, security teams face mounting pressure to establish robust guardrails that effectively balance innovation with resilience, particularly concerning identity management, data protection, and maintaining the integrity of critical infrastructure.
@@ -216,7 +252,7 @@
         <a class="libutton shadow-md" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7388246712924069888" target="_blank">
             Subscribe on LinkedIn
         </a>
-        <button id="shareButton" class="inline-block px-10 py-2 bg-indigo-600 text-white font-medium rounded-full hover:bg-red-700 transition duration-150 shadow-md">
+        <button id="shareButton" class="inline-block px-10 py-2 bg-cyan-500 text-gray-900 font-medium rounded-full hover:bg-cyan-400 transition duration-150 shadow-md">
             Share this Brief
         </button>
     </div>
@@ -224,8 +260,8 @@
         <p class="text-lg font-semibold text-gray-800 mb-1">
             www.HectorBorges.com/CyberSense
         </p>
-        <p class="mb-1">contact@HectorBorges.com</p>
-        <p class="text-indigo-300 mt-2">
+        <p class="mb-1 text-gray-700">contact@HectorBorges.com</p>
+        <p class="text-cyan-400 mt-2">
             © 2025 CyberSense. All content provided for educational and awareness purposes.
         </p>
     </div>
@@ -267,6 +303,5 @@
     </script> 
 
 </body>
-
 
 </html>
