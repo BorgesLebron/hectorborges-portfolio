@@ -105,7 +105,7 @@ nav a.active { /* Style for active link */
     flex-direction: row; /* Default: row for larger screens */
     align-items: center;
     gap: 3rem; /* More space between image and text */
-    background-color: #1a1a1a; /* Slightly lighter background for the card */
+    background-color: #05070c; /* Slightly lighter background for the card */
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
@@ -150,7 +150,7 @@ nav a.active { /* Style for active link */
     background-color: var(--accent);
     color: #fff;
     padding: 1rem 2rem; /* Larger button */
-    border-radius: 8px; /* Slightly more rounded */
+    border-radius: 35px; /* Slightly more rounded */
     font-weight: 600;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
@@ -261,7 +261,7 @@ footer {
     border-top: 1px solid var(--border-color);
     margin-top: 4rem;
     font-size: 0.9rem;
-    background-color: #000; /* Match nav background */
+    background-color: #05070c; /* Match nav background */
 }
 
 /* Responsive Adjustments */
@@ -348,8 +348,8 @@ footer {
     max-width: 1000px; /* Consistent max-width for content */
     margin: 2rem auto; /* Vertical spacing */
     padding: 1rem 2rem; /* Horizontal padding, more on smaller screens */
-    background-color: #1a1a1a; /* Slightly lighter background for the content block */
-    border-radius: 8px;
+    background-color: #05070c; /* Slightly lighter background for the content block */
+    border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -517,7 +517,7 @@ footer {
     background-color: var(--accent);
     color: #fff;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 35px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -525,13 +525,13 @@ footer {
     align-items: center;
     gap: 0.8rem; /* Space between icon and text */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 8px #192E35;
 }
 
 .pdf-button:hover {
-    background-color: var(--accent-light);
+    background-color: #192E35;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 6px 12px #192E35;
 }
 
 /* Optional: Icon for the PDF button (you can use an SVG or font icon) */
@@ -560,14 +560,14 @@ footer {
     font-weight: 500;
     display: inline-block; /* Makes padding and width/height work */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(21,131, 255, 0.2); /* Subtle shadow */
     margin-top: 1rem; /* Space above the button if it follows text */
 }
 
 .button:hover {
     background-color: var(--accent-light);
     transform: translateY(-1px); /* Slight lift */
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4); /* Enhanced shadow on hover */
+    box-shadow: 0 4px 8px rgba(55, 94, 138, 0.4); /* Enhanced shadow on hover */
 }
 
 /* --- Research Grid / Tiles Styling --- */
@@ -791,11 +791,52 @@ footer {
     box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
 }
 
-/* Define --card-background and --input-background in your :root if not already */
-/* :root {
-    --card-background: #1e1e1e;
-    --input-background: #2a2a2a;
-    --text-color: #e0e0e0;
-    --light-text-color: #a0a0a0;
-    --border-color: #444;
-} */
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #0A66C2; /* LinkedIn blue */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.linkedin-btn:hover {
+    background-color: #004182; /* darker hover */
+    transform: translateY(-2px);
+}
+
+.linkedin-icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 4px; /* optional if icon is square */
+}
+/* X (Twitter) Button */
+.x-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #000000; /* X brand black */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    margin-top: 10px;
+}
+
+.x-btn:hover {
+    background-color: #333333; /* lighter hover */
+    transform: translateY(-2px);
+}
+
+.x-icon {
+    height: 44px;
+    width: 44px;
+}
