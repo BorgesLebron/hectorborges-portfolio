@@ -379,7 +379,16 @@ footer {
     margin-bottom: 1rem;
 }
 
-.main-content p:not([class*="text-"]), /* Exclude paragraphs that have a Tailwind text color class */
+.main-content p {
+    font-weight: normal; 
+    
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    color: var(--text-color); 
+}
+
+.main-content p:not([class*="text-"]),
 .main-content ul,
 .main-content ol {
     font-size: 1.05rem;
@@ -562,16 +571,25 @@ footer {
 }
 
 /* --- Research Grid / Tiles Styling --- */
+.research-section {
+    text-align: left;
+    padding: 2rem 0;
+}
 
+.research-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--accent);
+}
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(2, 1fr); /* Two grids per row */
     gap: 1.5rem; /* Space between tiles */
     margin-top: 2rem;
 }
 
 .research-item {
-    background-color: #53,56,57; /* Slightly darker background for the tile */
+    background-color: #0F191C; /* Slightly darker background for the tile */
     border: 1px solid #333; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
     padding: 1.5rem;
@@ -594,6 +612,7 @@ footer {
 }
 
 .research-item p {
+    font-weight: normal;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--light-text-color); /* Slightly lighter paragraph text */
@@ -601,7 +620,7 @@ footer {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .research-grid {
         grid-template-columns: 1fr; /* Stack tiles vertically on very small screens */
     }
@@ -653,11 +672,20 @@ footer {
     padding: 0 0.5rem; /* Small horizontal padding */
 }
 
-/* Responsive adjustment for small screens */
-@media (max-width: 600px) {
-    .embedded-image-container {
-        padding: 0.5rem;
-        margin: 1.5rem auto;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+    .research-grid {
+        /* On screens up to 1000px wide, stick to a single column */
+        grid-template-columns: 1fr; 
+    }
+    .research-item {
+        padding: 1.2rem;
+    }
+    .research-item h3 {
+        font-size: 1.25rem;
+    }
+    .research-item p {
+        font-size: 0.95rem;
     }
 }
 
