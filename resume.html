@@ -16,12 +16,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Collapsible section styles */
+        .collapsible {
+            background-color: #3b82f6;
+            color: #fff;
+            cursor: pointer;
+            padding: 12px 20px;
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            text-align: left;
+            outline: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            margin-bottom: 8px;
+        }
+        .collapsible:hover {
+            background-color: #192E35;
+        }
+        .active-section {
+            background-color: #8DB2F2;
+        }
+        .content {
+            padding: 0 20px;
+            display: none;
+            overflow: hidden;
+            background-color: #0F191C;
+            border-left: 3px solid #3b82f6;
+            margin-bottom: 16px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
     <header class="page-header">
         <h1>Hector Borges</h1>
         <p>Cybersecurity Candidate | Veteran Leader</p>
-	<p>Risk Management & Operational Planning</p>
+	    <p>Risk Management & Operational Planning</p>
     </header>
 
     <nav>
@@ -36,158 +73,122 @@
     <main class="main-content">
         <div class="pdf-button-container">
             <a href="assets/resume.pdf" class="pdf-button" download="Resume.pdf">
-                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-1 10.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-2.5-3.5h-1c-.55 0-1 .45-1 1v.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-.5c0-.55-.45-1-1-1zm3 0h-1c-.55 0-1 .45-1 1v.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-.5c0-.55-.45-1-1-1zm3 0h-1c-.55 0-1 .45-1 1v.5c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-.5c0-.55-.45-1-1-1z"/>
-                </svg>
                 Download Resume (PDF)
             </a>
         </div>
 
-        <section class="resume-section">
-            <h3>Professional Summary</h3>
+        <!-- Professional Summary -->
+        <button class="collapsible">Professional Summary</button>
+        <div class="content">
             <p>Highly disciplined Cybersecurity Candidate and proven Veteran Leader with over 14 years of experience in high-tempo, mission-critical environments. Successfully translating advanced military leadership in operational planning, asset accountability, and policy implementation into a targeted focus on digital resilience.</p>
-	    <p>Possessing a strong academic foundation with a B.S. in Cybersecurity (4.0 GPA, Summa Cum Laude) and actively pursuing a M.S. in Cyber Operations. Expertise validated by the CompTIA Security+ certification and technical projects involving Zero Trust architecture, Active Directory security, and AI-based anomaly detection. Committed to applying a risk-based, mission-focused approach to fortify information systems and secure organizational assets.</p>
-        </section>
+	        <p>Possessing a strong academic foundation with a B.S. in Cybersecurity (4.0 GPA, Summa Cum Laude) and actively pursuing a M.S. in Cyber Operations. Expertise validated by the CompTIA Security+ certification and technical projects involving Zero Trust architecture, Active Directory security, and AI-based anomaly detection. Committed to applying a risk-based, mission-focused approach to fortify information systems and secure organizational assets.</p>
+        </div>
 
-        <section class="resume-section">
-            <h3>Technical Skills & Certifications</h3>
-            <div class="skill-category">
-                <h4 style="color:#B3D3FD;">Security & Compliance</h4>
-                <p>Network Security, Identity & Access Management (IAM), Incident Response, Policy Development, Firewall Configuration, HIPAA/NIST Frameworks</p>
+        <!-- Projects -->
+        <button class="collapsible">Projects</button>
+        <div class="content">
+            <div class="resume-entry">
+                <h4 style="color:#3b82f6;">CyberSense Newsletter</h4>
+                <p>Creator and author of the CyberSense Newsletter, a recurring digital awareness briefing designed to keep readers informed about emerging cybersecurity threats, modern trends, and professional development opportunities. Each edition combines Opening Notes, Situational Awareness Scan, Training Byte, Career Development, and Modernization & AI Insight. Powered by CyberSenseProbe, the newsletter distills complex cybersecurity topics into actionable insights.</p>
             </div>
-            <div class="skill-category">
-                <h4 style="color:#B3D3FD;">Systems & Administration</h4>
-                <p>Active Directory (AD), Linux, Group Policy Objects (GPO), PKI, System Troubleshooting</p>
+            <div class="resume-entry">
+                <h4 style="color:#3b82f6;">CyberSenseProbe</h4>
+                <p>A custom-built cybersecurity news research application that aggregates updates from a curated set of industry websites. Supports keyword-based searches or real-time news retrieval. Selecting an article reveals a detailed summary, including title, source, and key insights. Streamlines research workflow for producing the CyberSense Newsletter.</p>
             </div>
-            <div class="skill-category">
-                <h4 style="color:#B3D3FD;">Programming & Data</h4>
-                <p><strong>Python</strong>, Network Scripting, Database Management, TensorFlow, PyTorch, Power BI</p>
+            <div class="resume-entry">
+                <h4 style="color:#3b82f6;">Enterprise Security Architecture - Healthcare Network</h4>
+                <p>Designed a HIPAA/NIST-aligned Zero Trust framework, integrating a SIEM system and structured incident response protocols for a network spanning six hospitals.</p>
             </div>
-            <div class="skill-category">
-                <h4 style="color:#B3D3FD;">Emerging Tech</h4>
-                <p>AI/Machine Learning (AI/ML), Anomaly Detection, Generative AI</p>
+            <div class="resume-entry">
+                <h4 style="color:#3b82f6;">Active Directory Deployment - Medical Group</h4>
+                <p>Engineered a secure multi-site Active Directory environment with integrated PKI and GPO hierarchies, improving identity lifecycle controls and regulatory compliance.</p>
             </div>
+        </div>
 
-            <h3>Certifications & Training</h3>
+        <!-- Technical Skills -->
+        <button class="collapsible">Technical Skills</button>
+        <div class="content">
+            <h4>Security & Compliance</h4>
+            <p>Network Security, Identity & Access Management (IAM), Incident Response, Policy Development, Firewall Configuration, HIPAA/NIST Frameworks</p>
+            <h4>Systems & Administration</h4>
+            <p>Active Directory (AD), Linux, Group Policy Objects (GPO), PKI, System Troubleshooting</p>
+            <h4>Programming & Data</h4>
+            <p>Python, Network Scripting, Database Management, TensorFlow, PyTorch, Power BI</p>
+            <h4>Emerging Tech</h4>
+            <p>AI/Machine Learning (AI/ML), Anomaly Detection, Generative AI</p>
+
+            <h4>Certifications & Training</h4>
             <ul>
-                <li>
-                    <strong>CompTIA Security+ (CERTIFIED CE)</strong>
-                    <img src="https://www.credly.com/badges/c8a519d4-df22-477b-a7c8-7566828873fa/public_url" alt="Security+ Badge" style="height:30px; width:auto; margin-right:8px; display:inline-block; vertical-align:middle;">
-                </li>
-                <li><strong>Lean Six Sigma</strong> Yellow Belt</li>
-                <li><strong>NVIDIA</strong> Workshops (Deep Learning, Anomaly Detection, AI to Predictive Maintenance, Generative AI)</li>
+                <li>CompTIA Security+ <img src="assets/comptia.png" alt="Security+ Badge" style="height:30px;"></li>
+                <li>Lean Six Sigma Yellow Belt <img src="assets/yellow-belt.png" alt="Yellow Belt" style="height:30px;"></li>
+                <li>NVIDIA Workshops: Deep Learning, Anomaly Detection, AI to Predictive Maintenance, Generative AI <img src="assets/nvidia.jpg" alt="NVIDIA Logo" style="height:30px;"></li>
             </ul>
-        </section>
+        </div>
 
-        <section class="resume-section">
-            <h3>Professional Experience</h3>
-
+        <!-- Professional Experience -->
+        <button class="collapsible">Professional Experience</button>
+        <div class="content">
             <div class="resume-entry">
                 <h4>Information Systems Assistant</h4>
-                <div class="title-location">
-                    <span>ECPI University | San Antonio, TX</span>
-                    <span class="date">Sep 2023 – Sep 2024</span>
-                </div>
+                <span>ECPI University | San Antonio, TX | Sep 2023 – Sep 2024</span>
                 <ul>
-                    <li>Provided hands-on technical support and Active Directory administration, ensuring data confidentiality and availability for a network of 30+ users.</li>
-                    <li>Resolved complex hardware and software system issues through targeted troubleshooting, resulting in minimal user downtime and a quantifiable improvement in performance.</li>
-                    <li>Contributed to policy development and curriculum support activities, reinforcing compliance standards and institutional security best practices.</li>
+                    <li>Provided hands-on technical support and Active Directory administration for 30+ users.</li>
+                    <li>Resolved complex hardware/software issues, minimizing downtime and improving performance.</li>
+                    <li>Contributed to policy development and curriculum support activities.</li>
                 </ul>
             </div>
-
             <div class="resume-entry">
                 <h4>Senior Operations Planner / Program Manager</h4>
-                <div class="title-location">
-                    <span>U.S. Army | SFC (E-7)</span>
-                    <span class="date">Jan 2017 – Aug 2018</span>
-                </div>
+                <span>U.S. Army | SFC (E-7) | Jan 2017 – Aug 2018</span>
                 <ul>
-                    <li><strong>Operational Readiness & Security:</strong> Refined Standard Operating Procedures (SOPs) for contingency and disaster recovery, strengthening incident handling protocols and enhancing the resilience of mission-critical systems.</li>
-                    <li><strong>Logistics & Resource Management:</strong> Coordinated the deployment and sustainment of personnel and resources for complex multinational operations, consistently surpassing key planning and readiness benchmarks.</li>
-                    <li><strong>Training & Mentorship:</strong> Developed and implemented a robust Jumpmaster (JM) Mentorship Program for over 36 JMs, significantly increasing personnel currency and readiness across the Brigade.</li>
-                    <li><strong>Knowledge Management:</strong> Designed and deployed a digital "Leaders Book" reference guide for leadership, streamlining access to critical personnel and operational data for section chiefs and platoon sergeants.</li>
+                    <li>Refined SOPs for contingency and disaster recovery, enhancing resilience of mission-critical systems.</li>
+                    <li>Coordinated deployment and sustainment of personnel/resources for multinational operations.</li>
+                    <li>Developed Jumpmaster Mentorship Program for 36+ personnel, increasing readiness.</li>
+                    <li>Created a digital "Leaders Book" for streamlined operational knowledge access.</li>
                 </ul>
             </div>
-
             <div class="resume-entry">
                 <h4>Platoon Sergeant / First Sergeant (Acting)</h4>
-                <div class="title-location">
-                    <span>U.S. Army | SFC (E-7)</span>
-                    <span class="date">Sep 2014 – Jan 2017</span>
-                </div>
+                <span>U.S. Army | SFC (E-7) | Sep 2014 – Jan 2017</span>
                 <ul>
-                    <li><strong>Asset Management:</strong> Directed and oversaw the maintenance, accountability, and security of all assigned equipment valued over $25M, achieving and maintaining 100% mission readiness.</li>
-                    <li><strong>Leadership & Command:</strong> Served as the lead tactical and technical expert for an Artillery Platoon, responsible for the training, discipline, and welfare of 50+ personnel.</li>
-                    <li><strong>Training Execution:</strong> Planned and executed unit physical training and operational drills, ensuring the Platoon was tactically proficient and prepared for any mission.</li>
+                    <li>Directed and secured $25M+ in assets, maintaining 100% mission readiness.</li>
+                    <li>Led training, discipline, and welfare for 50+ personnel.</li>
+                    <li>Planned and executed physical training and operational drills.</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section class="resume-section">
-            <h3>Education</h3>
-
+        <!-- Education -->
+        <button class="collapsible">Education</button>
+        <div class="content">
             <div class="resume-entry">
                 <h4>Master of Science (M.S.) in Cybersecurity, Cyber Operations</h4>
-                <div class="title-location">
-                    <span>ECPI University Online | Virginia Beach, VA</span>
-                    <span class="date">In Progress (Expected May 2026)</span>
-                </div>
-                <p><strong>GPA:</strong> 4.0</p>
-                <p><strong>Relevant Coursework:</strong> Security Architecture & Design, Cloud Security, Cybersecurity Synopsis, Secure Coding Python</p>
+                <span>ECPI University Online | Virginia Beach, VA | In Progress (Expected May 2026)</span>
+                <p>GPA: 4.0 | Relevant Coursework: Security Architecture & Design, Cloud Security, Cybersecurity Synopsis, Secure Coding Python</p>
             </div>
-
             <div class="resume-entry">
                 <h4>Bachelor of Science (B.S.) in Computer Science, Cybersecurity & Information Security Technologies</h4>
-                <div class="title-location">
-                    <span>ECPI University | San Antonio, TX</span>
-                    <span class="date">Graduation: January 2025</span>
-                </div>
-                <p><strong>GPA:</strong> 4.0 | Summa Cum Laude</p>
-                <p><strong>Relevant Coursework:</strong> Advanced Cybersecurity, Ethical Hacking (w/ Lab), AI/Machine Learning, Network Scripting, Introduction to Databases, Principles of Cybersecurity, Routing & Switching</p>
+                <span>ECPI University | San Antonio, TX | Graduation: January 2025</span>
+                <p>GPA: 4.0 | Summa Cum Laude | Relevant Coursework: Advanced Cybersecurity, Ethical Hacking, AI/Machine Learning, Network Scripting, Introduction to Databases, Principles of Cybersecurity, Routing & Switching</p>
             </div>
-        </section>
+        </div>
 
-        <section class="resume-section">
-            <h3>Select Cybersecurity Projects</h3>
-            <div class="resume-entry">
-                <h4>Enterprise Security Architecture - Healthcare Network</h4>
-                <ul>
-                    <li>Designed a HIPAA/NIST-aligned Zero Trust framework, integrating a Security Information and Event Management (SIEM) system and structured incident response protocols for a network spanning six hospitals.</li>
-                </ul>
-            </div>
-            <div class="resume-entry">
-                <h4>Active Directory Deployment - Medical Group</h4>
-                <ul>
-                    <li>Engineered a secure multi-site Active Directory environment with integrated Public Key Infrastructure (PKI) and Group Policy Object (GPO) hierarchies, resulting in improved identity lifecycle controls and regulatory compliance.</li>
-                </ul>
-            </div>
-            <div class="resume-entry">
-                <h4>AI for Anomaly Detection</h4>
-                <ul>
-                    <li>Developed a Python-based autoencoder model for log monitoring and insider threat detection, which demonstrably improved the anomaly detection accuracy by 22%.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="resume-section">
-            <h3>Awards & Professional Affiliations</h3>
-            <div class="resume-entry">
-                <h4>Military Awards</h4>
-                <ul>
-		    <li>Bronze Star Medal (BSM).</li>
-		    <li>Meritorious Service Medal (MSM).</li>
-		    <li>Combat Action Badge.</li>
-		    <li>Master Parachutist Badge.</li>
-		</ul>
-            </div>
-            <div class="resume-entry">
-                <h4>Professional Affiliations</h4>
-                <ul>
-		    <li>Information Systems Security Association (ISSA).</li>
-		    <li>Information Systems Audit and Control Association (ISACA).</li>
-		</ul>
-            </div>
-        </section>
+        <!-- Awards & Affiliations -->
+        <button class="collapsible">Awards & Professional Affiliations</button>
+        <div class="content">
+            <h4 style="color:#3b82f6;">Military Awards</h4>
+            <ul>
+                <li>Bronze Star Medal (BSM)</li>
+                <li>Meritorious Service Medal (MSM)</li>
+                <li>Combat Action Badge</li>
+                <li>Master Parachutist Badge</li>
+            </ul>
+            <h4 style="color:#3b82f6;">Professional Affiliations</h4>
+            <ul>
+                <li>Information Systems Security Association (ISSA)</li>
+                <li>Information Systems Audit and Control Association (ISACA)</li>
+            </ul>
+        </div>
 
     </main>
 
@@ -198,6 +199,7 @@
     <script>
         document.getElementById('current-year-footer').textContent = new Date().getFullYear();
 
+        // Nav active link highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const currentPath = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('nav a');
@@ -207,6 +209,20 @@
                 } else if (currentPath === '' && link.getAttribute('href') === 'index.html') {
                     link.classList.add('active');
                 }
+            });
+
+            // Collapsible functionality
+            const collapsibles = document.querySelectorAll(".collapsible");
+            collapsibles.forEach(button => {
+                button.addEventListener("click", () => {
+                    button.classList.toggle("active-section");
+                    const content = button.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
             });
         });
     </script>
