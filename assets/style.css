@@ -1,25 +1,43 @@
 /* Variables */
 :root {
-    --accent: #007bff; /* Primary blue */
-    --accent-light: #339aff; /* Lighter blue for hover */
+    --accent: #3399FF; /* Primary blue */
+    --accent-light: #66B2FF; /* Lighter blue */
     --bg-color: #111827; /* Dark background */
     --text-color: #f5f5f5; /* Light text */
     --light-text-color: #aaa; /* Lighter text for footer/secondary */
-    --font-family: "Inter", Arial, sans-serif;
+    --font-family: Georgia;
     --border-color: #222; /* Darker border/divider */
 }
 
 /* Base Styles */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased; /* Better font rendering */
-    -moz-osx-font-smoothing: grayscale; /* Better font rendering */
-}
+        body{
+            /* Base Dark Background Color and Sci-Fi Grid Effect */
+            background-color: #111827; 
+            background-image:
+                /* 1. Subtle horizontal glowing lines (top left to bottom right) */
+                linear-gradient(135deg, rgba(29, 78, 216, 0.0) 25%, rgba(29, 78, 216, 0.05) 50%, rgba(29, 78, 216, 0.0) 75%),
+                /* 2. Subtle vertical glowing lines (top right to bottom left) */
+                linear-gradient(-135deg, rgba(29, 78, 216, 0.0) 25%, rgba(29, 78, 216, 0.05) 50%, rgba(29, 78, 216, 0.0) 75%),
+                /* 3. Larger, softer blue glow in the middle-left */
+                radial-gradient(circle at 10% 50%, rgba(30, 60, 100, 0.25) 0%, rgba(30, 60, 100, 0.0) 50%),
+                /* 4. Smaller, brighter blue glow in the middle-right */
+                radial-gradient(circle at 90% 40%, rgba(0, 150, 255, 0.15) 0%, rgba(0, 150, 255, 0.0) 30%),
+                /* 5. A faint, subtle grid pattern (lighter gray lines) */
+                linear-gradient(0deg, transparent 24%, rgba(60, 60, 60, 0.1) 25%, rgba(60, 60, 60, 0.1) 26%, transparent 27%),
+                /* 6. A faint, subtle grid pattern (lighter gray lines) */
+                linear-gradient(90deg, transparent 24%, rgba(60, 60, 60, 0.1) 25%, rgba(60, 60, 60, 0.1) 26%, transparent 27%);         
+            /* Adjust background sizes for grid and gradients */
+            background-size:
+                400px 400px, 
+                400px 400px, 
+                100% 100%, 
+                100% 100%, 
+                50px 50px, 
+                50px 50px;            
+            background-attachment: fixed;
+            color: #e0e7ff; /* Light, slightly blue-tinted text color for overall page content */
+            font-family: Georgia;
+        }
 
 a {
     color: var(--accent);
@@ -74,7 +92,7 @@ nav a {
     text-decoration: none;
     margin: 0 1rem;
     font-weight: 500;
-    padding: 0.5rem 0.8rem; /* Add padding for larger clickable area */
+    padding: 0.25rem 0.8rem; /* Add padding for larger clickable area */
     border-radius: 4px;
 }
 
@@ -106,11 +124,24 @@ nav a.active { /* Style for active link */
     align-items: center;
     gap: 3rem; /* More space between image and text */
     background-color: #05070c; /* Slightly lighter background for the card */
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%; 
+    border-color: rgba(255, 255, 255, 0.1) !important;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
     max-width: 1000px; /* Control card width */
 }
+.section-card {
+            background-color: rgba(0, 0, 0, 0.3) !important; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%; 
+            border-color: rgba(255, 255, 255, 0.1) !important;
+
+        }
 
 .profile-img {
     width: 250px; /* Slightly larger profile image */
@@ -134,7 +165,7 @@ nav a.active { /* Style for active link */
 
 .profile-info .tagline {
     font-size: 1.3rem;
-    color: var(--light-text-color);
+    color: var(--accent-light);
     margin-bottom: 1.5rem;
     font-weight: 300; /* Lighter weight for tagline */
 }
@@ -332,7 +363,7 @@ footer {
 
 .page-header h1 {
     font-size: 3rem; /* Larger heading */
-    color: var(--accent-light);
+    color: var(--accent);
     margin-bottom: 0.5rem;
 }
 
@@ -801,7 +832,7 @@ footer {
     border-radius: 35px;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
@@ -815,28 +846,8 @@ footer {
     width: 24px;
     border-radius: 4px; /* optional if icon is square */
 }
-/* X (Twitter) Button */
-.x-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background-color: #000000; /* X brand black */
-    color: white;
-    padding: 12px 20px;
-    border-radius: 35px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-    margin-top: 10px;
-}
 
-.x-btn:hover {
-    background-color: #333333; /* lighter hover */
-    transform: translateY(-2px);
-}
-
-.x-icon {
-    height: 44px;
-    width: 44px;
+.no-gap {
+  margin-top: 0;
+  margin-bottom: 0;
 }
