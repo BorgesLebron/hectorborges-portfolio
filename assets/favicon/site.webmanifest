@@ -3,13 +3,13 @@
   "short_name": "HectorBorges",
   "icons": [
     {
-      "src": "/assets/favicon/web-app-manifest-192x192.png",
+      "src": "/assets/csicon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/favicon/web-app-manifest-512x512.png",
+      "src": "/assets/favicon/csicon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
