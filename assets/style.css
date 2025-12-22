@@ -79,12 +79,16 @@ p {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #05070c;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%; 
+    border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 nav a {
@@ -379,9 +383,13 @@ footer {
     max-width: 1000px; /* Consistent max-width for content */
     margin: 2rem auto; /* Vertical spacing */
     padding: 1rem 2rem; /* Horizontal padding, more on smaller screens */
-    background-color: #05070c; /* Slightly lighter background for the content block */
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%; 
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .main-content h1 {
@@ -435,24 +443,6 @@ footer {
 
 .main-content li {
     margin-bottom: 0.5rem;
-}
-
-#coming-soon-title {
-    /* Center the text within the <h1> element */
-    text-align: center; 
-    
-    /* Remove the full-width border-bottom which looks odd when text is centered */
-    border-bottom: none; 
-    
-    /* Make it a little bigger/more dramatic */
-    font-size: 5rem;
-    
-    /* Center the <h1> block horizontally by setting margins, if needed, though text-align is usually enough */
-    margin-left: auto;
-    margin-right: auto;
-    
-    /* Make the color stand out */
-    color: var(--accent-light); 
 }
 
 /* Responsive Adjustments for Sub-Pages */
@@ -676,7 +666,7 @@ footer {
     /* Add subtle card styling for presentation */
     padding: 1rem;
     background-color: var(--card-background); 
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center; /* Centers the image and caption */
 }
