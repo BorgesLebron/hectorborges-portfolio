@@ -841,3 +841,60 @@ footer {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/* Container for the tiles */
+.preprint-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two grids per row */
+    gap: 1.5rem; /* Space between tiles */
+
+}
+
+/* The Individual Tile */
+.preprint-card {
+    background-color: #0F191C; /* Slightly darker background for the tile */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(25, 25, 112, 1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect to match your red-glow theme */
+.preprint-card:hover {
+    border-color: #dc2626; /* Red-600 */
+    box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.1);
+    transform: translateY(-4px);
+}
+
+.card-tag {
+    color: var(--accent); /* Highlight title color */
+    font-size: 1.7rem;
+    margin-bottom: 0rem;
+    border-bottom: 1px solid #444; /* Subtle separator */
+    padding-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.preprint-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    color: #6E84A1; 
+}
+
+.preprint-card p {
+    flex-grow: 1; /* This pushes everything below it to the bottom */
+    margin-bottom: 1.5rem; /* Normal spacing, NOT 5rem */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+
+}
+
+.card-tech-stack {
+    margin-top: auto; /* Final insurance policy to keep it at the bottom */
+    padding-top: 1rem;
+    border-top: 1px solid #1e293b; 
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
