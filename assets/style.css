@@ -902,8 +902,8 @@ footer {
 #myBtn {
   display: none;        /* Hidden by default */
   position: fixed;     /* Fixed position */
-  bottom: 40px;        /* Distance from bottom (increased for padding) */
-  right: 40px;         /* Distance from right margin */
+  bottom: 60px;        /* Distance from bottom (increased for padding) */
+  right: 100px;         /* Distance from right margin */
   z-index: 99;         /* High priority layer */
   
   /* Modern Styling */
@@ -926,4 +926,5 @@ footer {
 #myBtn.show {
   display: block;
 }
+
 
