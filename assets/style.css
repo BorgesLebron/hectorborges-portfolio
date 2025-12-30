@@ -900,11 +900,30 @@ footer {
 }
 
 #myBtn {
-  /* ... (other styles) ... */
-  display: none; /* Hidden by default */
+  display: none;        /* Hidden by default */
+  position: fixed;     /* Fixed position */
+  bottom: 40px;        /* Distance from bottom (increased for padding) */
+  right: 40px;         /* Distance from right margin */
+  z-index: 99;         /* High priority layer */
+  
+  /* Modern Styling */
+  background-color: #1a1a1a; /* Dark theme */
+  color: #00ffcc;           /* Cyber-teal accent color */
+  border: 1px solid #00ffcc;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;       /* Slightly rounded corners */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  line-height: 0;           /* Centers the SVG icon */
 }
 
-/* Add a class that can be toggled by JavaScript to show the button */
+#myBtn:hover {
+  background-color: #00ffcc;
+  color: #1a1a1a;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
 #myBtn.show {
   display: block;
 }
+
