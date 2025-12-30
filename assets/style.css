@@ -898,3 +898,13 @@ footer {
     font-size: 0.75rem;
     color: #94a3b8;
 }
+
+#myBtn {
+  /* ... (other styles) ... */
+  display: none; /* Hidden by default */
+}
+
+/* Add a class that can be toggled by JavaScript to show the button */
+#myBtn.show {
+  display: block;
+}
