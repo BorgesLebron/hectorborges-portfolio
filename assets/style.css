@@ -845,9 +845,18 @@ footer {
 /* Container for the tiles */
 .preprint-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two grids per row */
-    gap: 1.5rem; /* Space between tiles */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1.5rem;
+}
 
+/* Force the first item to span across both columns (full width) */
+.preprint-card:first-child {
+    grid-column: 1 / span 2;
+}
+
+/* Optional: Make the first card slightly more prominent since it's full width */
+.preprint-card:first-child h3 {
+    font-size: 1.4rem;
 }
 
 /* The Individual Tile */
@@ -926,5 +935,6 @@ footer {
 #myBtn.show {
   display: block;
 }
+
 
 
