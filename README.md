@@ -16,7 +16,7 @@ The briefing aims to cultivate disciplined digital intuition across the workforc
 # Publishing Architecture
 
 The CyberSense newsletter operates through a hybrid distribution model that integrates LinkedIn publishing with a self-hosted archive.
-
+```text
 Threat Intelligence Sources
         │
         ▼
@@ -35,7 +35,7 @@ www.HectorBorges.com/CyberSense
         │
         ▼
 Portfolio Website Ecosystem
-
+```
 ## This architecture ensures:
 
 • primary audience reach through LinkedIn
