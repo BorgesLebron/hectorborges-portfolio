@@ -18,20 +18,25 @@ The briefing aims to cultivate disciplined digital intuition across the workforc
 The CyberSense newsletter operates through a hybrid distribution model that integrates LinkedIn publishing with a self-hosted archive.
 
 Threat Intelligence Sources
+
           │
           ▼
    CyberSense Writing Process
+   
           │
           ▼
   LinkedIn Newsletter Publication
+  
           │
           ▼
  Individual Newsletter Page
  (hosted in this repository)
+ 
           │
           ▼
 CyberSense Archive Page
  www.HectorBorges.com/CyberSense
+ 
           │
           ▼
  Portfolio Website Ecosystem
