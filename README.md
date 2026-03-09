@@ -33,7 +33,7 @@ B --> C[LinkedIn Publication]
 
 C --> D[Individual Newsletter Page<br>Hosted in Repository]
 
-D --> E[CyberSense Archive Page<br>HectorBorges.com/CyberSense]
+D --> E[CyberSense Archive Page
 
 E --> F[Portfolio Website Ecosystem]
 ```
