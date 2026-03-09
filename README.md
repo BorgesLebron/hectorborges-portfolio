@@ -23,26 +23,7 @@ The briefing aims to cultivate disciplined digital intuition across the workforc
 # Publishing Architecture
 
 The CyberSense newsletter operates through a hybrid distribution model that integrates LinkedIn publishing with a self-hosted archive.
-```text
-Threat Intelligence Sources
-        │
-        ▼
-CyberSense Writing Process
-        │
-        ▼
-LinkedIn Newsletter Publication
-        │
-        ▼
-Individual Newsletter Page
-(hosted in this repository)
-        │
-        ▼
-CyberSense Archive Page
-www.HectorBorges.com/CyberSense
-        │
-        ▼
-Portfolio Website Ecosystem
-```
+
 ```mermaid
 flowchart TD
 
@@ -66,7 +47,7 @@ E --> F[Portfolio Website Ecosystem]
 • centralized archival access through the portfolio site
 
 
-# 📰 CyberSense Brief Structure
+# 📰 CyberSense Brief Structure 🗞️
 
 Each briefing follows a standardized intelligence framework.
 
@@ -169,7 +150,7 @@ Professional background and experience.
 
 Professional communication channel.
 
-# 📊 CyberSense Production Workflow
+# ⚙️ CyberSense Production Workflow
 
 The newsletter follows a disciplined intelligence cycle.
 
