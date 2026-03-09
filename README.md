@@ -90,7 +90,7 @@ Analysis of emerging technologies influencing cybersecurity strategy, including 
 # Repository Structure
 
 hectorborges-portfolio
-.
+```text
 ├── assets/
 │   ├── favicon/
 │   ├── images/
@@ -112,7 +112,7 @@ hectorborges-portfolio
 ├── README.md
 ├── SECURITY.md
 └── .gitignore
-
+```
 The newsletter directory contains archived CyberSense briefings, each stored as a standalone HTML page to ensure persistent access and direct linking from LinkedIn.
 
 # Website Sections
