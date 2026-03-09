@@ -1,3 +1,5 @@
+assets/CyberSense.png
+
 # Cybersecurity Portfolio – Hector Borges
 A cybersecurity portfolio and publishing platform designed to present research, professional credentials, and the CyberSense Daily Digital Awareness Brief.
 
@@ -5,7 +7,12 @@ This repository hosts the static infrastructure behind HectorBorges.com, which s
 
 The platform integrates a portfolio website with a cybersecurity intelligence newsletter to promote structured understanding of the evolving digital threat landscape.
 
-# CyberSense – Daily Digital Awareness Brief
+[![Website](https://img.shields.io/badge/Website-HectorBorges.com-blue)](https://www.hectorborges.com)
+[![Newsletter](https://img.shields.io/badge/CyberSense-Digital%20Awareness%20Brief-darkgreen)](https://www.hectorborges.com/cybersense)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-CyberSense-blue?logo=linkedin)](https://www.linkedin.com)
+[![Security](https://img.shields.io/badge/Security-Responsible%20Disclosure-red)](SECURITY.md)
+
+# 📡 CyberSense – Daily Digital Awareness Brief 🛰️
 
 CyberSense is a recurring cybersecurity intelligence briefing that analyzes emerging threats, defensive practices, and technology developments affecting the modern digital ecosystem.
 
@@ -36,6 +43,20 @@ www.HectorBorges.com/CyberSense
         ▼
 Portfolio Website Ecosystem
 ```
+```mermaid
+flowchart TD
+
+A[Threat Intelligence Sources] --> B[CyberSense Writing Process]
+
+B --> C[LinkedIn Newsletter Publication]
+
+C --> D[Individual Newsletter Page<br>Hosted in Repository]
+
+D --> E[CyberSense Archive Page<br>HectorBorges.com/CyberSense]
+
+E --> F[Portfolio Website Ecosystem]
+```
+
 ## This architecture ensures:
 
 • primary audience reach through LinkedIn
@@ -45,7 +66,7 @@ Portfolio Website Ecosystem
 • centralized archival access through the portfolio site
 
 
-# CyberSense Brief Structure
+# 📰 CyberSense Brief Structure
 
 Each briefing follows a standardized intelligence framework.
 
@@ -148,7 +169,7 @@ Professional background and experience.
 
 Professional communication channel.
 
-# CyberSense Production Workflow
+# 📊 CyberSense Production Workflow
 
 The newsletter follows a disciplined intelligence cycle.
 
@@ -162,7 +183,7 @@ The newsletter follows a disciplined intelligence cycle.
 
 5. Archive the briefing within the portfolio repository.
 
-# Security Considerations
+# 🛡️ Security Considerations
 
 This repository contains only static website content and publicly available research material.
 
@@ -170,7 +191,7 @@ Sensitive data, authentication tokens, or private research datasets are not stor
 
 The repository is maintained strictly as a public information platform.
 
-# Author
+# 👤 Author
 
 Hector Borges
 Cybersecurity Graduate Student
