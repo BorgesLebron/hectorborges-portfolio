@@ -91,7 +91,6 @@ Analysis of emerging technologies influencing cybersecurity strategy, including 
 
 hectorborges-portfolio
 .
-│
 ├── assets/
 │   ├── favicon/
 │   ├── images/
