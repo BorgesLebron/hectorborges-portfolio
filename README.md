@@ -9,8 +9,8 @@ The platform integrates a portfolio website with a cybersecurity intelligence ne
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.hectorborges.com)
 [![Newsletter](https://img.shields.io/badge/CyberSense-065F46?style=for-the-badge&logo=substack&logoColor=white)](https://www.hectorborges.com/cybersense)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hectorjborges)
-[![Security](https://img.shields.io/badge/Security-DC2626?style=for-the-badge&logo=googlecloudcybersecurity&logoColor=white)](SECURITY.md)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com)
+[![Security](https://img.shields.io/badge/Security-DC2626?style=for-the-badge&logo=shield-halved&logoColor=white)](SECURITY.md)
 
 # 📡 CyberSense – Daily Digital Awareness Brief 🛰️
 
