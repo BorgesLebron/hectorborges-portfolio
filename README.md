@@ -7,11 +7,6 @@ This repository hosts the static infrastructure behind HectorBorges.com, which s
 
 The platform integrates a portfolio website with a cybersecurity intelligence newsletter to promote structured understanding of the evolving digital threat landscape.
 
-[![Website](https://img.shields.io/badge/Website-HectorBorges.com-blue)](https://www.hectorborges.com)
-[![Newsletter](https://img.shields.io/badge/CyberSense-Digital%20Awareness%20Brief-darkgreen)](https://www.hectorborges.com/cybersense)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-CyberSense-blue?logo=linkedin)](https://www.linkedin.com)
-[![Security](https://img.shields.io/badge/Security-Responsible%20Disclosure-red)](SECURITY.md)
-
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.hectorborges.com)
 [![Newsletter](https://img.shields.io/badge/CyberSense-065F46?style=for-the-badge&logo=substack&logoColor=white)](https://www.hectorborges.com/cybersense)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hectorjborges)
