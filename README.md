@@ -1,4 +1,4 @@
-assets/CyberSense.png
+![CyberSense Banner] (assets/CyberSense.png)
 
 # Cybersecurity Portfolio – Hector Borges
 A cybersecurity portfolio and publishing platform designed to present research, professional credentials, and the CyberSense Daily Digital Awareness Brief.
