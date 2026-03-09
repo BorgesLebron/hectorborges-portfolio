@@ -1,5 +1,5 @@
 
-<img src="assets/csicon.png" alt="CyberSense Banner" width="25%">
+<img src="assets/csicon.png" alt="CyberSense Banner" width="25%" "object-top-right">
 
 
 # Cybersecurity Portfolio – Hector Borges
