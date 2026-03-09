@@ -12,3 +12,28 @@ CyberSense is a recurring cybersecurity intelligence briefing that analyzes emer
 Each issue translates complex cybersecurity reporting into structured situational awareness, allowing readers to understand not only what happened, but why it matters and how to respond.
 
 The briefing aims to cultivate disciplined digital intuition across the workforce, developing awareness one byte of sense at a time.
+
+# Publishing Architecture
+
+The CyberSense newsletter operates through a hybrid distribution model that integrates LinkedIn publishing with a self-hosted archive.
+
+Threat Intelligence Sources
+          │
+          ▼
+   CyberSense Writing Process
+          │
+          ▼
+  LinkedIn Newsletter Publication
+          │
+          ▼
+ Individual Newsletter Page
+ (hosted in this repository)
+          │
+          ▼
+CyberSense Archive Page
+ www.HectorBorges.com/CyberSense
+          │
+          ▼
+ Portfolio Website Ecosystem
+
+
