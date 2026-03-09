@@ -29,7 +29,7 @@ flowchart TD
 
 A[Threat Intelligence Sources] --> B[CyberSense Writing Process]
 
-B --> C[LinkedIn Newsletter Publication]
+B --> C[LinkedIn Publication]
 
 C --> D[Individual Newsletter Page<br>Hosted in Repository]
 
