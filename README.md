@@ -90,6 +90,7 @@ Analysis of emerging technologies influencing cybersecurity strategy, including 
 # Repository Structure
 
 hectorborges-portfolio
+.
 │
 ├── assets/
 │   ├── favicon/
