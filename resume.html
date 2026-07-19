@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <style>
         .collapsible {
-            background-color: #3b82f6;
+            background-color: #3b83f607;
             color: #fff;
             cursor: pointer;
             padding: 12px 20px;
@@ -29,6 +29,7 @@
             outline: none;
             font-size: 1.2rem;
             font-weight: 500;
+            font-family: Georgia, serif;
             transition: background-color 0.2s ease;
             margin-bottom: 8px;
         }
@@ -47,6 +48,16 @@
             margin-bottom: 16px;
             animation: fadeIn 0.3s ease-in-out;
         }
+        .pdf-button {
+            background:rgba(96, 3, 246, 0.507); 
+            border:1px solid rgba(96, 3, 246, 0.608); 
+            border-radius:99px; 
+            padding:15px 14px; 
+            font-size:15px; 
+            font-weight:700; 
+            color:var(--cs-cyan); 
+            white-space:nowrap;
+        }
         @keyframes fadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
@@ -54,11 +65,6 @@
     </style>
 </head>
 <body>
-    <header class="page-header">
-        <h1>Hector Borges</h1>
-        <p>Cybersecurity Intelligence Analyst &nbsp;|&nbsp; Managing Editor &amp; Founder, CyberSense.Solutions &nbsp;|&nbsp; U.S. Army Veteran</p>
-        <p>Threat Intelligence &bull; AI-Powered Publishing &bull; Risk Management &bull; Operational Leadership</p>
-    </header>
 
     <nav>
         <a href="index.html">Home</a>
@@ -69,6 +75,12 @@
         <a href="contact.html">Contact</a>
     </nav>
 
+    <header class="page-header">
+        <h1>Hector Borges</h1>
+        <p>Cybersecurity Intelligence Analyst &nbsp;|&nbsp; Managing Editor &amp; Founder, CyberSense.Solutions &nbsp;|&nbsp; U.S. Army Veteran</p>
+        <p>Threat Intelligence &bull; AI-Powered Publishing &bull; Risk Management &bull; Operational Leadership</p>
+    </header>
+    
     <main class="main-content">
         <div class="pdf-button-container">
             <a href="assets/resume.pdf" class="pdf-button" download="Resume.pdf">
